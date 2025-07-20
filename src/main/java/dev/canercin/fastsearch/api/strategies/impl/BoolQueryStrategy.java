@@ -1,7 +1,7 @@
-package com.fastsearch.fast_search.api.strategies.impl;
+package dev.canercin.fastsearch.api.strategies.impl;
 
-import com.fastsearch.fast_search.api.requests.impl.BoolQuerySearchRequest;
-import com.fastsearch.fast_search.api.strategies.SearchStrategy;
+import dev.canercin.fastsearch.api.requests.impl.BoolQuerySearchRequest;
+import dev.canercin.fastsearch.api.strategies.SearchStrategy;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import co.elastic.clients.elasticsearch._types.query_dsl.BoolQuery;
 import co.elastic.clients.elasticsearch._types.query_dsl.Query;

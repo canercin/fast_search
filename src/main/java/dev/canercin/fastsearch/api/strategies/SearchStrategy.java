@@ -1,4 +1,4 @@
-package com.fastsearch.fast_search.api.strategies;
+package dev.canercin.fastsearch.api.strategies;
 
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.data.elasticsearch.core.SearchHit;

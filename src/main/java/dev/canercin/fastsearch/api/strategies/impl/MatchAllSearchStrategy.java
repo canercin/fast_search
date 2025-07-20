@@ -1,7 +1,7 @@
-package com.fastsearch.fast_search.api.strategies.impl;
+package dev.canercin.fastsearch.api.strategies.impl;
 
-import com.fastsearch.fast_search.api.requests.impl.SingleValueSearchRequest;
-import com.fastsearch.fast_search.api.strategies.SearchStrategy;
+import dev.canercin.fastsearch.api.requests.impl.SingleValueSearchRequest;
+import dev.canercin.fastsearch.api.strategies.SearchStrategy;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.data.elasticsearch.core.query.Query;
 import org.springframework.data.elasticsearch.client.elc.NativeQuery;

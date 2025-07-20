@@ -1,7 +1,7 @@
-package com.fastsearch.fast_search.api.requests.impl;
+package dev.canercin.fastsearch.api.requests.impl;
 
 import co.elastic.clients.elasticsearch._types.query_dsl.Query;
-import com.fastsearch.fast_search.api.requests.SearchRequest;
+import dev.canercin.fastsearch.api.requests.SearchRequest;
 
 import java.util.ArrayList;
 import java.util.HashMap;

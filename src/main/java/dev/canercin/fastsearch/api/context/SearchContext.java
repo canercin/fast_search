@@ -1,9 +1,9 @@
-package com.fastsearch.fast_search.api.context;
+package dev.canercin.fastsearch.api.context;
 
-import com.fastsearch.fast_search.api.requests.SearchRequest;
-import com.fastsearch.fast_search.api.strategies.SearchStrategy;
-import com.fastsearch.fast_search.api.strategies.impl.*;
-import com.fastsearch.fast_search.api.type.SearchType;
+import dev.canercin.fastsearch.api.requests.SearchRequest;
+import dev.canercin.fastsearch.api.strategies.SearchStrategy;
+import dev.canercin.fastsearch.api.strategies.impl.*;
+import dev.canercin.fastsearch.api.type.SearchType;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 
 import java.util.HashMap;

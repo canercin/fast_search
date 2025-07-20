@@ -1,6 +1,6 @@
-package com.fastsearch.fast_search.api.requests.impl;
+package dev.canercin.fastsearch.api.requests.impl;
 
-import com.fastsearch.fast_search.api.requests.SearchRequest;
+import dev.canercin.fastsearch.api.requests.SearchRequest;
 
 public class RangeSearchRequest implements SearchRequest {
     private String field;

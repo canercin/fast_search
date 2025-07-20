@@ -1,4 +1,4 @@
-package com.fastsearch.fast_search.api.type;
+package dev.canercin.fastsearch.api.type;
 
 public enum SearchType {
     BOOL_QUERY,
