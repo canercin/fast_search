@@ -6,13 +6,37 @@
 
     <groupId>dev.canercin</groupId>
     <artifactId>fastsearch</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <name>Fast Search</name>
+    <description>Fast Search is a Maven application that provides a fast and efficient search service using Elasticsearch.</description>
+    <url>https://www.github.com/canercin/fast_search</url>
+
+    <developers>
+        <developer>
+            <name>Caner Çin</name>
+            <email>canercin@canercin.dev</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/canercin/fast_search.git</connection>
+        <developerConnection>scm:git:ssh://github.com:canercin/fast_search.git</developerConnection>
+        <url>https://github.com/canercin/fast_search/tree/master</url>
+    </scm>
+
+    <licenses>
+        <license>
+            <name>GPL-3.0 license</name>
+            <url>https://www.gnu.org/licenses/gpl-3.0.html#license-text</url>
+        </license>
+    </licenses>
 
     <dependencies>
         <dependency>
@@ -21,5 +45,59 @@
             <version>3.5.3</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.10.0</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.2.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.8.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

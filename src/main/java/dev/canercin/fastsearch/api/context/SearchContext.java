@@ -10,6 +10,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author  Caner ÇİN
+ * @version 1.0.0
+ * @param <T> Generic type for the search results.
+ */
 public class SearchContext<T> {
     private final Map<SearchType, SearchStrategy<T, ? extends SearchRequest>> strategyMap = new HashMap<>();
 
@@ -24,6 +29,14 @@ public class SearchContext<T> {
         strategyMap.put(SearchType.TERMS, new TermsQuerySearchStrategy<>());
     }
 
+    /**
+     * @param type The type of search to be performed.
+     * @param operations Elasticsearch operations to be used for the search.
+     * @param entityClass The class of the entity to be searched.
+     * @param request The search request containing the parameters for the search.
+     * @param <SR> The type of the search request.
+     * @return A list of search results of type T.
+     */
     public <SR extends SearchRequest> List<T> search(SearchType type, ElasticsearchOperations operations, Class<T> entityClass, SR request) {
         @SuppressWarnings("unchecked")
         final SearchStrategy<T, SR> strategy = (SearchStrategy<T, SR>) strategyMap.get(type);
