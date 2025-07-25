@@ -4,6 +4,11 @@ import dev.canercin.fastsearch.api.requests.SearchRequest;
 
 import java.util.List;
 
+/**
+ * Represents a search request that allows searching across multiple fields with a single value.
+ * This class is typically used for full-text search scenarios where the same value needs to be matched
+ * against multiple fields in the indexed documents.
+ */
 public class MultiMatchSearchRequest implements SearchRequest {
     private List<String> fields;
     private String value;

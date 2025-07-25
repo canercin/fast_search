@@ -9,13 +9,18 @@ import org.springframework.data.elasticsearch.client.elc.NativeQuery;
 
 import java.util.List;
 
+/**
+ * @param <T> Generic type for the search results.
+ * @param <SR> The type of the search request, which extends BoolQuerySearchRequest.
+ */
 public class BoolQueryStrategy<T, SR extends BoolQuerySearchRequest> implements SearchStrategy<T, SR> {
 
     /**
-     * Bool Query, birden fazla sorguyu birleştirerek karmaşık arama kriterleri oluşturur.
-     * */
-
-
+     * @param operations Elasticsearch operations to be used for the search.
+     * @param entityClass The class of the entity to be searched.
+     * @param request The search request containing the parameters for the search.
+     * @return A list of search results of type T.
+     */
     @Override
     public List<T> search(ElasticsearchOperations operations, Class<T> entityClass, SR request) {
         List<Query> mustQueries = request.getQueriesByType("must");

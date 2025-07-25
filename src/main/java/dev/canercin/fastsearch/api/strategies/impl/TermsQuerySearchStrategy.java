@@ -10,12 +10,18 @@ import org.springframework.data.elasticsearch.client.elc.NativeQuery;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * @param <T> Generic type for the search results.
+ * @param <SR> The type of the search request, which extends MultipleValueSearchRequest.
+ */
 public class TermsQuerySearchStrategy<T, SR extends MultipleValueSearchRequest> implements SearchStrategy<T, SR> {
 
-    /*
-     * Terms Query, belirlenen alan üzerinde birden fazla değere sahip belgeleri arar.
-     * */
-
+    /**
+     * @param operations Elasticsearch operations to be used for the search.
+     * @param entityClass The class of the entity to be searched.
+     * @param request The search request containing the parameters for the search.
+     * @return A list of search results of type T.
+     */
     @Override
     public List<T> search(ElasticsearchOperations operations, Class<T> entityClass, SR request) {
         String field = request.getField();

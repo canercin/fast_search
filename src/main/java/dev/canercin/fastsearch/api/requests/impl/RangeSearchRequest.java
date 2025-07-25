@@ -2,6 +2,11 @@ package dev.canercin.fastsearch.api.requests.impl;
 
 import dev.canercin.fastsearch.api.requests.SearchRequest;
 
+/**
+ * Represents a search request that allows searching for documents within a specified range of values.
+ * This class is typically used for numeric or date fields where you want to find documents
+ * that fall within a certain range defined by the "from" and "to" values.
+ */
 public class RangeSearchRequest implements SearchRequest {
     private String field;
     private Object from;

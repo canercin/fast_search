@@ -9,12 +9,18 @@ import org.springframework.data.elasticsearch.client.elc.NativeQuery;
 import java.util.List;
 import java.time.Instant;
 
+/**
+ * @param <T> Generic type for the search results.
+ * @param <SR> The type of the search request, which extends SingleValueSearchRequest.
+ */
 public class MatchAllSearchStrategy<T, SR extends SingleValueSearchRequest> implements SearchStrategy<T, SR> {
 
     /**
-     * Match All Query, bütün dokümanları eşleştirir.
-     * */
-
+     * @param operations Elasticsearch operations to be used for the search.
+     * @param entityClass The class of the entity to be searched.
+     * @param request The search request containing the parameters for the search.
+     * @return A list of search results of type T.
+     */
     @Override
     public List<T> search(ElasticsearchOperations operations, Class<T> entityClass, SR request) {
 
